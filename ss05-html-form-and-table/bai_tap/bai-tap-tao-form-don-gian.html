@@ -1,0 +1,118 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tạo Form Đơn Giản</title>
+</head>
+<body>
+    <h2>Phần SỐ 1</h2>
+    <form action="">
+
+        <h3>SỞ THÍCH CỦA BẠN</h3>
+        <div>
+        <label for="name">Họ và tên:</label>
+        <input type = "text" name="name" id="name"/><br><br>
+        </div>
+        <div>
+        <label for="email">Email:</label>
+        <input type = "email" name="name" id="email"/><br>
+        </div>
+        <div style="display: flex;align-items: baseline;padding: 15px 0px;">
+            <div>
+                <p>Sở thích của bạn:</p>
+            </div>
+            <div>
+                <div>
+                    <label for="so-thich1">Thể thao</label>
+                    <input type="checkbox" name="" id="so-thich1">
+                    <label for="so-thich2">Âm nhạc</label>
+                    <input type="checkbox" name="" id="so-thich2">
+                    <label for="so-thich3">Đọc sách</label>
+                    <input type="checkbox" name="" id="so-thich3">
+                </div>
+                <div>
+                    <label for="so-thich4">Lướt web</label>
+                    <input type="checkbox" name="" id="so-thich4">
+                    <label for="so-thich5">Chơi game</label>
+                    <input type="checkbox" name="" id="so-thich5">
+                    <label for="so-thich6">Điện ảnh</label>
+                    <input type="checkbox" name="" id="so-thich6">
+                </div>
+                <div>
+                    <label for="so-thich7">Du lịch</label>
+                    <input type="checkbox" name="" id="so-thich7">
+                </div>
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Gửi thông tin">
+            <input type="reset" value="Nhập lại">
+        </div>
+    </form>
+    <h2>Phần Số 2</h2>
+    <form action="">
+        <h3>Đăng kí học viên</h3>
+        <label for="name">Họ và tên</label>
+        <input type="text" name="fullname" id="name">
+        <br>
+        <br>
+        <label for="date">Ngày sinh</label>
+        <input type="date" name="date" id="date">
+        <br>
+        <br>
+        <label for="gender">Giới tính</label>
+        <input type="radio" name="gender" id="gender">Nam
+        <input type="radio" name="gender" id="gender">Nữ
+        <br>
+        <br>
+        <label for="location">Địa chỉ</label>
+        <input type="text" name="location" id="location"></input>
+        <br>
+        <br>
+        <label for="class">Chọn lớp</label>
+        <select name="class" id="class">
+            <option value="a1">A1</option>
+            <option value="a2">A2</option>
+            <option value="a3">A3</option>
+        </select>
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <input type = "email" name="name" id="email"/>
+        <br>
+        <br>
+        <label for="phone">Số điện thoại:</label>
+        <input type ="number" name="name" id="phone"/><br>
+        <br>
+        <br>
+        <div>
+            <input type="submit" value="Gửi thông tin">
+            <input type="reset" value="Nhập lại">
+        </div>
+    </form>
+</body>
+</html>
+
+<style>
+    body {
+        background: #d5feff;
+    }
+    form {
+        background: #fff;
+        width: max-content;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h2 {
+        background: darkorange;
+        color: white;
+        text-align: center;
+    }
+    form input{
+        padding: 10px 20px;
+    }
+</style>
