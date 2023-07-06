@@ -6,19 +6,27 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <!-- Chỉ áp dụng cho tính toán -->
   <section>
-    <div class="result">
-    </div>
+    <div id="result"></div>
     <div class="calculator-main">
       <table width="100%" cellspacing="2">
         <tr>
           <td>Rad</td>
           <td>Deg</td>
           <td>x!</td>
-          <td>(</td>
-          <td>)</td>
-          <td>%</td>
-          <td>AC</td>
+          <td>
+            <button class="btn" value="(">(</button>
+          </td>
+          <td>
+            <button class="btn" value=")">)</button>
+          </td>
+          <td>
+            <button class="btn" value="%">%</button>
+          </td>
+          <td>
+            <button class="btn" onclick="clearOne()">CE</button>
+          </td>
         </tr>
         <tr>
           <td>Inv</td>
@@ -33,7 +41,9 @@
           <td class="number">
             <button class="btn" value="9">9</button>
           </td>
-          <td>CE</td>
+          <td>
+            <button class="btn" value="/" id="chia">/</button>
+          </td>
         </tr>
         <tr>
           <td>π</td>
@@ -48,7 +58,9 @@
           <td class="number">
             <button class="btn" value="6">6</button>
           </td>
-          <td>x</td>
+          <td>
+            <button class="btn" value="*" id="nhan">x</button>
+          </td>
         </tr>
         <tr>
           <td>e</td>
@@ -63,7 +75,9 @@
           <td class="number">
             <button class="btn" value="3">3</button>
           </td>
-          <td>-</td>
+          <td>
+            <button class="btn" value="-" id="tru"> - </button>
+          </td>
         </tr>
         <tr>
           <td>Ans</td>
@@ -74,7 +88,9 @@
           </td>
           <td class="number">.</td>
           <td onclick="tinhToan()">=</td>
-          <td>+</td>
+          <td>
+            <button class="btn" value="+" id="cong"> + </button>
+          </td>
         </tr>
       </table>
     </div>
