@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <label for="input-currency">Amount</label>
+  <input type="number" name="currency-one" id="input-currency">
+  <label for="currency-one">From Currency</label>
+  <select required name="currency-one" id="currency-one">
+    <option value="vnd">VND</option>
+    <option selected value="usd">USD</option>
+  </select>
+
+  <label for="currency-two">To Currency</label>
+  <select required name="currency-two" id="currency-two">
+    <option selected value="vnd">VND</option>
+    <option value="usd">USD</option>
+  </select>
+  <br>
+  <br>
+  <input onclick="convertMoney()" type="submit" value="Chuyển đổi">
+  <br>
+  <br>
+  <p id="result"></p>
+
+  <script src="bai-tap-ung-dung-chuyen-doi-tien-te.js"></script>
+</body>
+</html>
