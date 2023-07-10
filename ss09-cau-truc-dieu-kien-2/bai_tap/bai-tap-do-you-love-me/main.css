@@ -1,0 +1,12 @@
+#yes, #no {
+    padding: 10px 20px;
+    border: 15px;
+    margin: 5px;
+}
+#bg {
+    padding: 20px;
+}
+#yes {
+    background: deeppink;
+    color: #eeeeee;
+}
