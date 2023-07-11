@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Viết chương trình tính tổng tiền nhận được theo lãi kép</h2>
+    <label for="tien-ban-dau">Số tiền ban đầu</label><br>
+    <input type="number" name="" id="tien-ban-dau"><br><br>
+
+    <label for="lai-suat-hang-nam">Lãi suất hang năm</label><br>
+    <input type="number" name="" id="lai-suat-hang-nam"><br><br>
+
+    <label for="year">Số năm gửi</label><br>
+    <input type="number" name="" id="year"><br><br>
+
+    <input onclick="tinhLaiKep()" type="submit" value="Tính">
+    <p id="result"></p>
+<script>
+    function tinhLaiKep() {
+        let money = parseFloat(document.getElementById("tien-ban-dau").value);
+        let laisuat = parseFloat(document.getElementById("lai-suat-hang-nam").value);
+        let year = parseFloat(document.getElementById("year").value);
+        let total = money*(Math.pow((1+laisuat/100),year));
+        document.getElementById("result").innerHTML = "Tổng số tiền bạn sẽ nhận được khi gui " + money +" đồng trong "+year+" năm là: "+ total
+    }
+</script>
+</body>
+</html>

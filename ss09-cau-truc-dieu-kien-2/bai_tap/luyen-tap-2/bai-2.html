@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="m"></label>
+    <input type="number" name="m" id="m"> m
+    <br>
+    <br>
+    <input onclick="chuyenDoiFt()" type="submit" value="Chuyển đổi">
+    <br>
+    <p id="result"></p>
+<script>
+    function chuyenDoiFt() {
+        let m = parseInt(document.getElementById("m").value);
+        let ft = m * 3.2808;
+        document.getElementById("result").innerHTML = ft +" ft";
+    }
+</script>
+</body>
+</html>

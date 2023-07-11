@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Tính diện tích tam giác vuông khi biết 2 cạnh liền kề a, b</h2>
+    <label for="a">Nhập cạnh a </label><br>
+    <input type="number" name="a" id="a"> cm
+    <br><br>
+    <label for="b">Nhập cạnh b</label><br>
+    <input type="number" name="b" id="b"> cm
+    <br>
+    <br>
+    <input onclick="tinhDienTich()" type="submit" value="Chuyển đổi">
+    <br>
+    <p id="result"></p>
+<script>
+    function tinhDienTich() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let s = 1/2*(a*b);
+        document.getElementById("result").innerHTML = s + " cm vuông";
+    }
+</script>
+</body>
+</html>

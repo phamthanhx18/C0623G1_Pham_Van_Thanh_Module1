@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Viết chương trình tính giá điện</h2>
+    <label for="a">Số điện sử dụng trong tháng(kW) </label><br>
+    <input type="number" name="a" id="a">
+    <br><br>
+    <input onclick="tinhGiaDien()" type="submit" value="Submit">
+    <br>
+    <p id="result"></p>
+<script>
+    function tinhGiaDien() {
+        let a = parseInt(document.getElementById("a").value);
+        if (a < 100) {
+            document.getElementById("result").innerHTML ="Tổng tiền điện cần phải thanh toán là: "+ a*1800 + "Đồng"
+        } else if ( a <200 ) {
+            document.getElementById("result").innerHTML ="Tổng tiền điện cần phải thanh toán là: "+ a*2000 + "Đồng"
+        } else if ( a <400 ) {
+            document.getElementById("result").innerHTML ="Tổng tiền điện cần phải thanh toán là: "+ a*2600 + "Đồng"
+         }else if ( a <700 ) {
+            document.getElementById("result").innerHTML ="Tổng tiền điện cần phải thanh toán là: "+ a*2900 + "Đồng"
+        } else {
+            document.getElementById("result").innerHTML ="Tổng tiền điện cần phải thanh toán là: "+ a*3500 + "Đồng"
+        }
+    }
+</script>
+</body>
+</html>

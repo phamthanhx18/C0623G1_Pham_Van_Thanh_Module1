@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Viết chương trình tính thuế thu nhập cá nhân</h2>
+    <label for="a">Thu nhập của bạn (đồng) </label><br>
+    <input type="number" name="a" id="a">
+    <br><br>
+    <input onclick="tinhThue()" type="submit" value="Submit">
+    <br>
+    <p id="result"></p>
+<script>
+    function tinhThue() {
+        let a = parseInt(document.getElementById("a").value);
+        if (a <5000000) {
+            document.getElementById("result").innerHTML ="Tổng tiền thuế cần phải đóng là: "+ a*5/100 + " Đồng"
+        } else if ( a <10000000 ) {
+            document.getElementById("result").innerHTML ="Tổng tiền thuế cần phải đóng là: "+ a*10/100 + " Đồng"
+        } else if ( a <18000000 ) {
+            document.getElementById("result").innerHTML ="Tổng tiền thuế cần phải đóng là: "+ a*15/100 + " Đồng"
+        } else if (a < 32000000) {
+            document.getElementById("result").innerHTML ="Tổng tiền thuế cần phải đóng là: "+ a*20/100 + " Đồng"
+        } else if ( a <52000000 ){
+            document.getElementById("result").innerHTML ="Tổng tiền thuế cần phải đóng là: "+ a*25/100 + " Đồng"
+        } else if ( a <80000000 ) {
+            document.getElementById("result").innerHTML ="Tổng tiền thuế cần phải đóng là: "+ a*30/100 + " Đồng"
+        } else {
+            document.getElementById("result").innerHTML ="Tổng tiền thuế cần phải đóng là: "+ a*35/100 + " Đồng"
+        }
+    }
+</script>
+</body>
+</html>

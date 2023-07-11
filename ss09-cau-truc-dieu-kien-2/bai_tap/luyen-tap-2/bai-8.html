@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2> Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</h2>
+    <label for="a">Nhập số tuổi </label><br>
+    <input type="number" name="a" id="a">
+    <br><br>
+
+    <input onclick="checkTuoi()" type="submit" value="Submit">
+    <br>
+    <p id="result"></p>
+<script>
+    function checkTuoi() {
+        let age = parseInt(document.getElementById("a").value);
+        if (age % 1 === 0 && age <=120 && age >=0) {
+            document.getElementById("result").innerHTML = age + " là số tuổi hợp lệ"
+        }
+    }
+</script>
+</body>
+</html>

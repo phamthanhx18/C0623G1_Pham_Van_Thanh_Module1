@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="c"></label>
+    <input type="number" name="do-c" id="c">độ C
+    <br>
+    <br>
+    <input onclick="chuyenDoiF()" type="submit" value="Chuyển đổi">
+    <br>
+    <p id="result"></p>
+<script>
+    function chuyenDoiF() {
+        let doC = parseInt(document.getElementById("c").value);
+        let f = doC * (9 / 5) + 32;
+        document.getElementById("result").innerHTML = f +" độ F";
+    }
+</script>
+</body>
+</html>

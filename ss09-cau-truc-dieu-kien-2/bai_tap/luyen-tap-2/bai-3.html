@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="a">Nhập độ dài cạnh a</label>
+    <input type="number" name="a" id="a"> cm
+    <br>
+    <br>
+    <input onclick="tinhDienTich()" type="submit" value="Chuyển đổi">
+    <br>
+    <p id="result"></p>
+<script>
+    function tinhDienTich() {
+        let m = parseInt(document.getElementById("a").value);
+        let dienTich = m * m;
+        document.getElementById("result").innerHTML = dienTich +" cm vuông";
+    }
+</script>
+</body>
+</html>
