@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = +prompt("Số tiền gửi ban đầu");
+    let soThang = +prompt("Số tháng gửi");
+    let laiSuat = +prompt("Lãi suất hàng tháng(%)");
+    let tienLai = 0;
+    for (let i = 1; i < soThang; i++) {
+        tienLai += (money*laiSuat/100);
+        money += tienLai;
+    }
+    document.write("Bạn sẽ nhận được tổng cộng "+money+" khi gửi "+soThang+" tháng")
+</script>
+</body>
+</html>
