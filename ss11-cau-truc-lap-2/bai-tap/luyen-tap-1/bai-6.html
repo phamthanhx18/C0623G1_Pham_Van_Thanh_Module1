@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let soPhanTu = +prompt("lấy bao nhiêu số chia hết cho 7 để tính tổng?")
+    let count = 0;
+    let tong = 0;
+    for (let i = 0;; i++) {
+        if (i%7===0) {
+            document.write(i+"<br>")
+            tong += i;
+            count++;
+        } if (count===soPhanTu) {
+            break;
+        }
+    }
+    document.write("Tổng của "+soPhanTu+" số đầu tiên chia hết cho 7 có tổng là: "+tong);
+</script>
+</html>

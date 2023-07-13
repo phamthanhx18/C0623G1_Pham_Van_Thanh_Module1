@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let count = +prompt("Nhập số lượng fibonacci chia het cho 5 muon in ra",5);
+    let bienDem = 0;
+
+    let n1 = 0;
+    let n2 = 1;
+    let n3;
+    for (let i = 0;; i++) {
+        n3 = n2 + n1;
+        n1 = n2;
+        n2 = n3;
+        if (n1 % 5 ===0) {
+            document.write(n1+"<br>");
+            bienDem+=1;
+        }
+        if (count==bienDem){
+            break;
+        }
+    }
+</script>
+</html>

@@ -12,8 +12,6 @@ function hienThi() {
             if (count === 2) {
                 document.write(i + "<br>"); //4
                 countSNT += 1; //1
-
-
             }
             count = 0;
         } else {

@@ -5,18 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-
 </body>
 <script>
-    let numbers = +prompt("Nhập số lượng fibonacci muon in ra");
+    let tong = 0;
+    let daySo;
     let n1 = 0;
     let n2 = 1;
     let n3;
-    for (let i = 0; i <=numbers ; i++) {
+    for (let i = 0;i<20; i++) {
         n3 = n2 + n1;
         n1 = n2;
         n2 = n3;
-        document.write(n1+"<br>");
+        daySo += n1+",";
+        tong +=n1;
     }
+    document.write(daySo)
+    document.write("<br>Tổng của dãy trên là " +tong)
 </script>
 </html>
