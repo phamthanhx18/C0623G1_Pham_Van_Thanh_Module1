@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="en">Nhập từ tiếng Anh can tra cuu</label>
+<input type="text" name="eng" id="en">
+<br><br>
+<input onclick="traCuu()" type="submit" value="Tra cứu">
+<p id="result"></p>
+
+<h3>Lưu ý:</h3>
+<p>Chỉ tra cứu được các từ như: Orange, Lemon, Mango, Apple, Banana...</p>
+<script>
+    function traCuu() {
+        let arrEng = ["Orange", "Lemon", "Mango", "Apple", "Banana"];
+        let arrVie = ["Cam", "Chanh", "Xoài", "Táo", "Chuối"];
+        let tuTraCuu = document.getElementById("en").value;
+        for (let i = 0; i < arrEng.length; i++) {
+            if (tuTraCuu===arrEng[i]) {
+                alert(arrEng[i]+" có nghĩa là: "+arrVie[i]);
+            }
+        }
+    }
+</script>
+</body>
+</html>
