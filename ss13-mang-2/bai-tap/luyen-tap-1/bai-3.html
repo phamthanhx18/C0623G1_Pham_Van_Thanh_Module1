@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let phanTu  = +prompt("Số phần tử muốn lấy giá trị trung bình")
+    let numbers = [];
+    let max = 0;
+    let index;
+    let total = 0;
+    for (let i = 0; i < phanTu; i++) {
+        numbers[i] = +prompt("Nhập số " + (i + 1));
+        total += parseInt(numbers[i]);
+        for (let j = 0; j < numbers.length; j++) {
+            if (max < numbers[j]) {
+                max = numbers[j];
+                index = j;
+            }
+        }
+    }
+    document.write("Tổng của dãy số được thêm vào là: " + total + "<br>");
+    document.write("Giá trị trung bình của dãy số được thêm vào là: " + total/phanTu + "<br>")
+    document.write("Dãy số được thêm vào là: " + numbers + "<br>")
+    document.write("Số lớn nhất là: " + max + "<br>Tương ứng với vị trí " + index)
+</script>
+</body>
+</html>

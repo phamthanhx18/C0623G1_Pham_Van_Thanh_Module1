@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let numbers = ["8","15","3","80","6","44","3","7","9","5"];
+    let soNguyen = prompt("Nhập một số nguyên V bat kì để kiểm tra xem có trùng không")
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i]===soNguyen){
+            numbers.splice(i, 1);
+            numbers.push(0);
+        }
+    }
+    document.write("Chuỗi sau khi thực hiện là: "+numbers)
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  let numbers = []
+  for (let i = 0; i < 10; i++) {
+    numbers[i] = prompt("Nhập số nguyên thứ "+(i+1));
+    if (numbers[i]>10) {
+      document.write(numbers[i]+" lớn hơn 10<br>")
+    }
+  }
+  document.write("Danh sách các số được thêm vào là <br>" +numbers)
+</script>
+</body>
+</html>

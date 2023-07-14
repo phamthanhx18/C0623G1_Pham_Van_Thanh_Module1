@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let numbers = ["8","15","3","80","6","44","3","7","9","5"];
+    let soNguyen = prompt("Nhập một số nguyên V bat kì để kiểm tra xem có trùng không")
+    let count = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i]===soNguyen){
+            alert(numbers[i]+" is in the array");
+        } else {
+            count++;
+            if (count===numbers.length) {
+                alert(soNguyen+" is not in the array");
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

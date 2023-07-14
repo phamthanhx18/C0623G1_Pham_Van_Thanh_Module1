@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let phanTu  = +prompt("Số phần tử nhập vào")
+    let numbers = [];
+    let count = 0;
+    for (let i = 0; i < phanTu; i++) {
+        numbers[i] = +prompt("Nhập số " + (i + 1));
+        if (numbers[i]<0) {
+            document.write(numbers[i]+"<br>")
+            count++
+        }
+    }
+    document.write("Có tổng số "+count+" phần tử là số nguyên âm");
+</script>
+</body>
+</html>
