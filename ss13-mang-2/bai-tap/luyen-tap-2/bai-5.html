@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let soPhanTu = +prompt("Số phần tử trong mỗi mảng");
+    // Số phần tử trong mỗi mảng
+    let newArray1 = [];
+    let newArray2 = [];
+    for (let i = 0; i < soPhanTu; i++) {
+        newArray1[i] = +prompt("Nhập phần tử " + i + " trong mảng 1");
+    }
+    for (let i = 0; i < soPhanTu; i++) {
+        newArray2[i] = +prompt("Nhập phần tử " + i + " trong mảng 2");
+    }
+    document.write("Mảng thứ nhất được thêm vào: "+newArray1);
+    document.write("<br>");
+    document.write("Mảng thứ hai được thêm vào:" +newArray2);
+    document.write("<br>");
+    let count = 0;
+    for (let i = 0; i < soPhanTu; i++) {
+        if (newArray1[i]===newArray2[i]){
+            count++;
+        }
+    }
+    if (count===0) {
+        document.write("2 Chuỗi trên không giống nhau");
+    } else if (count===soPhanTu) {
+        document.write("2 Chuỗi trên dống nhau hoàn toàn");
+    } else {
+        document.write("2 Chuỗi trên không dống nhau hoàn toàn. Có "+count+" phần tử dống nhau");
+    }
+</script>
+</body>
+</html>
