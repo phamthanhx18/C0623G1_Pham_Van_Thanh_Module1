@@ -8,7 +8,14 @@
 
 <script>
   let newString = prompt("Nhập chuỗi cần đếm kí tự");
-  document.write("Số kí tự của chuỗi '"+newString+"' là: "+newString.length);
+  let count = 1;
+  // Mặc định ít nhất chuỗi dữ liệu chuẩn phải có 1 từ;
+  for (let i = 0; i < newString.length ; i++) {
+      if (newString[i]===" ") {
+          count++;
+      }
+  }
+  document.write("Số từ trong chuỗi trên là: "+count);
 </script>
 </body>
 </html>
