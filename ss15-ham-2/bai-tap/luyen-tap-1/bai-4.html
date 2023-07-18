@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="check">Nhập vào để kiểm tra</label>
+    <input type="check" name="check" id="check">
+    <input type="submit" value="Kiểm tra" onclick="checkNumber(check.value)">
+
+<script>
+    function checkNumber(check) {
+        if (isNaN(check)!==true){
+            document.write("Đây là kí tự số");
+        } else {
+            document.write("Đây không phải kí tự số");
+        }
+    }
+</script>
+</body>
+</html>

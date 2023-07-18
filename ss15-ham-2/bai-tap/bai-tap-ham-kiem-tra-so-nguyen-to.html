@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="number">Nhập số nguyên tố cần kiểm tra</label>
+    <input type="number" name="number" id="number">
+    <input onclick="isPrime(number.value)" type="submit" value="Kiểm tra">
+    <p id="result"></p>
+
+<script>
+    function isPrime(number) {
+        let count = 0;
+        for (let i = 2; i < number; i++) {
+            if (number%i===0){
+                count++;
+            }
+        }
+        if (count!==0){
+            document.getElementById("result").innerHTML = number+" không phải số nguyên tố";
+        } else {
+            document.getElementById("result").innerHTML = number+" là số nguyên tố";
+        }
+    }
+</script>
+</body>
+</html>

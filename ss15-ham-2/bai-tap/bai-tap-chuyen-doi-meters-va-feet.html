@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="feet">Nhập số feet</label>
+    <input type="number" name="number" id="feet" oninput="footToMeter(this.value)">
+    <br>
+    <br>
+    <label for="metters">Nhập số meeter</label>
+    <input type="number" name="number" id="metters" oninput="meeterToFeet(this.value)">
+    <p id="result"></p>
+
+<script>
+    function footToMeter(foot){
+        let meeter = foot*0.305;
+        document.getElementById("metters").value = meeter;
+    }
+    function meeterToFeet(meter){
+        let feet = meter*3.279;
+        document.getElementById("feet").value = feet;
+    }
+</script>
+</body>
+</html>
