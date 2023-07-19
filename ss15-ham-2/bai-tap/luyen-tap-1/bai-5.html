@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let arrStar1 = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+   let arrStar2 = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+   function checkStar(star){
+       let count = 0;
+       for (let i = 0; i < arrStar1.length; i++) {
+           if (star===arrStar1[i]){
+               return document.write(star+" tương ứng với "+arrStar2[i]);
+           } else {
+               count++;
+               if (count===arrStar1.length){
+                   return document.write("Không có ngôi sao tương ứng");
+               }
+           }
+       }
+   }
+   let star = prompt("Nhập một ngôi sao");
+   checkStar(star);
+</script>
+</body>
+</html>
