@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="number">Nhập vào số để tính giai thừa</label>
+    <input type="number" name="number" id="number">
+    <input type="submit" value="Tính giai thừa" onclick="factorial(number.value)">
+
+    <p id="result"></p>
+
+<script>
+    function factorial(number) {
+        let factorial = 1;
+        if (number > 0 && number%1===0) {
+            for (let i = 1; i < number; i++) {
+                factorial *= i;
+            }
+            return document.getElementById("result").innerHTML = "Gia thừa của "+number+" là "+factorial;
+        } else if (number == 0) {
+            return document.getElementById("result").innerHTML = "Gia thừa của "+number+" là "+factorial;
+        } else {
+            return alert("Số bạn nhập vào không hợp lệ");
+        }
+    }
+</script>
+</body>
+</html>

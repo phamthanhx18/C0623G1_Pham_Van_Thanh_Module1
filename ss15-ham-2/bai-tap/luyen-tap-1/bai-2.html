@@ -5,20 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-    <label for="number">Nhập bán kính hình tròn</label>
-    <input type="number" name="number" id="number">
-    <input type="submit" onclick="areaOfCircle(number.value)" value="Tính diện tích">
-    <input type="submit" onclick="circuOfCircle(number.value)" value="Tính chu vi">
-
-    <p id="result"></p>
-
+    <p>Nhập đối số </p>
+    <input type="number" name="para" id="para">
+    <input type="submit" value="Kết quả" onclick="result(para.value)">
 <script>
-    const PI = 3.14;
-    function areaOfCircle(number) {
-        return document.getElementById("result").innerHTML = "Diện tích: "+number*number*PI;
-    }
-    function circuOfCircle(number) {
-        return document.getElementById("result").innerHTML = "Chu vi "+2*PI*number;
+    function result(number){
+        number = parseInt(number) + 1;
+        return document.write(number);
     }
 </script>
 </body>

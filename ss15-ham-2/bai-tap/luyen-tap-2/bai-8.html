@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function nhapMangVaDao() {
+        let soPhanTu = +prompt("Nhập số phần tử trong mảng");
+        let newArray = []
+        for (let i = 0; i < soPhanTu; i++) {
+            newArray[i] = prompt("Nhập gia trị cho phần tử" +(i+1));
+        }
+        return newArray = newArray.reverse();
+    }
+    document.write(nhapMangVaDao())
+</script>
+</body>
+</html>

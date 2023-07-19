@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkNguyenDuong(number){
+        if (number%1===0 && number>0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    let number = +prompt("Nhập số cần kiểm tra");
+    document.write(checkNguyenDuong(number));
+</script>
+</body>
+</html>

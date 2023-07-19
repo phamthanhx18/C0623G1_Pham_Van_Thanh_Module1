@@ -5,15 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    <label for="number">Nhập số cần tính bình phương</label>
-    <input type="number" name="number" id="number" oninput="squared(this.value)">
-
-    <p id="result"></p>
+  <input type="submit" onclick="alertMessage()" value="Click">
 
 <script>
-    function squared(number){
-        return document.getElementById("result").innerHTML = "Bình phương = "+number*number;
-    }
+  function alertMessage(){
+    alert("Xin chào");
+  }
 </script>
 </body>
 </html>

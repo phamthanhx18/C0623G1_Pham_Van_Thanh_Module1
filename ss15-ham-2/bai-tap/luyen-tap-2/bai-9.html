@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function checkOfArray(text){
+        let newArray = ["a","a","b","c","1","22","333"];
+        let count = 0;
+        for (let i = 0; i < newArray.length; i++) {
+            if (text==newArray[i]){
+               count+=1;
+            }
+        }
+        if (newArray.indexOf(text)===-1){
+            return -1;
+        } else {
+            return "Số lần xuất hiện của "+text+" là "+count;
+        }
+    }
+    let input = prompt("Nhập kí tự bất kì")
+    document.write(checkOfArray(input));
+</script>
+</body>
+</html>

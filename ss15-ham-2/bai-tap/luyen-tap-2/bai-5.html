@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt("Số Nguyên Thứ Nhất");
+    let number2 = +prompt("Số Nguyên Thứ Hai");
+    let number3 = +prompt("Số Nguyên Thứ Ba");
+    function minNumber(a,b,c) {
+        if (a<b && a<c) {
+            document.write(a+" là số nhỏ nhất");
+        } else if (a>b && a<c) {
+            document.write(b+" là số nhỏ nhất");
+        } else if (b<c && a<c) {
+            document.write(a+" là số nhỏ nhất");
+        } else if (b>c && a>c) {
+            document.write(c+" là số nhỏ nhất");
+        }
+    }
+    minNumber(number1,number2,number3);
+</script>
+</body>
+</html>
