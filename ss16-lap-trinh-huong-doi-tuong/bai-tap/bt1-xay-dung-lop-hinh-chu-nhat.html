@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="canvas">
+
+</div>
+
+<script>
+  class Rectangle {
+    constructor(width,height) {
+      this.width = width;
+      this.height = height;
+    }
+    getWidth(){
+      return this.width;
+    }
+    getHeight(){
+      return this.height;
+    }
+
+    getArea(){
+      return this.width * this.height;
+    }
+    getCircuit(){
+      return (this.width+this.height)*2;
+    }
+    getCanvas() {
+      // 1 int = 96 px; Su dung x10 để canvas nhìn rõ hơn
+      document.getElementById("canvas").style.width = this.getWidth()*10 +"px";
+      document.getElementById("canvas").style.height = this.getHeight()*10 +"px";
+      document.getElementById("canvas").style.border = "1px #000 solid";
+    }
+    getRectangle(){
+      document.write("Chiều dài: "+this.width+" int" +"<br>Chiều cao: "+this.height+" int"+
+              "<br>Diện tích: "+this.getArea()+"<br>Chu vi: "+this.getCircuit());
+    }
+  }
+  let width = +prompt("Nhập chiều dài")
+  let height = +prompt("Nhập chiều cao")
+  let rectangle1 = new Rectangle(width,height);
+  rectangle1.getRectangle();
+  rectangle1.getCanvas();
+</script>
+</body>
+</html>

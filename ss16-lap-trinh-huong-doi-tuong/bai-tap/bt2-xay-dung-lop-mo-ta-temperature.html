@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  class Temperature {
+    constructor(celsius) {
+      this.celsius = celsius;
+    }
+    getFahrenheit(){
+      return this.celsius*1.8+32;
+    }
+    getKenvin(){
+      return this.celsius+ 273.15;
+    }
+    getFK(){
+      document.write("Độ C dùng để chuyển đổi: "+this.celsius+"<br>"+
+            "Độ F: "+this.getFahrenheit()+"<br>"+
+            "Độ K: "+this.getKenvin()+"<br>");
+    }
+  }
+  let celsius = new Temperature(+prompt("Nhập nhiệt độ C"));
+  celsius.getFK();
+</script>
+</body>
+</html>
