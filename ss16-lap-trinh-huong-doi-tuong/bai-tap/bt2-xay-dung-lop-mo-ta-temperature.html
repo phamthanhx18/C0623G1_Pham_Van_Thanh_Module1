@@ -23,8 +23,9 @@
             "Độ K: "+this.getKenvin()+"<br>");
     }
   }
-  let celsius = new Temperature(+prompt("Nhập nhiệt độ C"));
-  celsius.getFK();
+  let celsius = +prompt("Nhap nhiet do C can chuyen doi");
+  let convert = new Temperature(celsius);
+  convert.getFK();
 </script>
 </body>
 </html>

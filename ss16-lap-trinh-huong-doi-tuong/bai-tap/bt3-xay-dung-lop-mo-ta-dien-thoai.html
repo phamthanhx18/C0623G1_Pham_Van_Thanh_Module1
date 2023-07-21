@@ -122,10 +122,14 @@
       }
   }
   function btnViewDraf(){
-      if ((nokia.draft).length!==0){
-          nokia.viewMessageDraft();
+      if (nokia.status){
+          if ((nokia.draft).length!==0){
+              nokia.viewMessageDraft();
+          } else {
+              console.log("Chưa có bản nháp nào");
+          }
       } else {
-          console.log("Chưa có bản nháp nào");
+          console.log("Bạn cần bật điện thoại");
       }
   }
   // Demo nhận tin nhắn từ Iphone
@@ -146,10 +150,14 @@
       }
   }
   function btnViewMsgSend(){
-      if ((nokia.outbox).length!==0) {
-          nokia.viewMessageSend();
+      if (nokia.status){
+          if ((nokia.outbox).length!==0) {
+              nokia.viewMessageSend();
+          } else {
+              console.log("Bạn chưa gửi bất kì Message nào");
+          }
       } else {
-          console.log("Bạn chưa gửi bất kì Message nào");
+          console.log("Bạn cần bật điện thoại");
       }
   }
   function btnCheckBattery(){
