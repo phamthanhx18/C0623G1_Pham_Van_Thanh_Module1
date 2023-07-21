@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+    <style>
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 400px;
+        }
+        .btn input {
+            background: #eee;
+            padding: 10px 25px;
+            margin: 5px;
+            border: 1px #dadada solid;
+            border-radius: 7px;
+        }
+    </style>
+<body>
+    <div id="game"></div>
+    <div class="btn">
+        <input type="submit" value="Trái" onclick="btnMoveLeft()">
+        <input type="submit" value="Phải" onclick="btnMoveRight()">
+        <input type="submit" value="Lên" onclick="btnMoveTop()">
+        <input type="submit" value="Xuống" onclick="btnMoveBottom()">
+    </div>
+
+    <script>
+    function Hero(image, top, left, size) {
+        this.image = image;
+        this.top = top;
+        this.left = left;
+        this.size = size;
+
+        this.getHeroElement = function () {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+
+        this.moveRight = function () {
+            this.left += 50;
+            console.log('ok: ' + this.left);
+        }
+        this.moveLeft = function () {
+            this.left -= 50;
+            console.log('ok: ' + this.left);
+        }
+        this.moveTop = function () {
+            this.top -= 50;
+            console.log('ok: ' + this.top);
+        }
+        this.moveBottom = function () {
+            this.top += 50;
+            console.log('ok: ' + this.top);
+        }
+
+    }
+
+    var hero = new Hero('cat.png', 20, 30, 200);
+
+    function start() {
+        if (hero.left < window.innerWidth - hero.size) {
+            hero.moveRight();
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, 500)
+    }
+
+    function start() {
+        if (hero.left > window.innerWidth - hero.size) {
+            hero.moveLeft();
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+    }
+
+    start();
+    function btnMoveLeft() {
+        hero.moveLeft();
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+    }
+
+    function btnMoveRight() {
+        hero.moveRight();
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+    }
+
+    function btnMoveTop() {
+        hero.moveTop();
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+    }
+
+    function btnMoveBottom() {
+        hero.moveBottom();
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+    }
+</script>
+</body>
+</html>

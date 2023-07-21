@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="submit" value="Bật Công Tắc" onclick="turnOn()">
+<input type="submit" value="Tắt Công Tắc" onclick="turnOff()">
+<input type="submit" value="Check Status" onclick="checkStatus()">
+
+<script>
+  class SwitchButton {
+    constructor(status,lamp) {
+      this.status = status;
+      this.lamp = lamp;
+    }
+    getStatusSwitch(){
+      if (this.status){
+        return "Đang bật";
+      } else {
+        return "Đang tắt";
+      }
+    }
+
+    connectToLamp(EletricLamp){
+      return this.lamp = EletricLamp;
+    }
+
+    switchOn(){
+      if (this.status){
+        console.log("Bóng đèn đã và đang được bật");
+      } else {
+        this.status = true;
+        this.lamp.status = true;
+        console.log("Bật bóng đèn thành công")
+      }
+    }
+
+    switchOff(){
+      if (!this.status){
+        console.log("Bóng đèn đã được tắt từ trước");
+      } else {
+        this.status = false;
+        this.lamp.status = false;
+        console.log("Tắt bóng đèn thành công");
+      }
+    }
+  }
+
+  class EletricLamp {
+      constructor(status) {
+        this.status = status;
+      }
+      getStatusLamp(){
+        if (this.status){
+          return "Đang bật";
+        } else {
+          return "Đang tắt";
+        }
+      }
+  }
+  let electriclamp = new EletricLamp(false);
+  let switchBt = new SwitchButton(false,electriclamp);
+
+  function turnOn() {
+    switchBt.switchOn();
+  }
+  function turnOff() {
+    switchBt.switchOff();
+  }
+  function checkStatus(){
+    console.log("Trạng thái của nút là "+switchBt.getStatusSwitch()+
+            ";Bóng đèn "+electriclamp.getStatusLamp());
+  }
+</script>
+</body>
+</html>
