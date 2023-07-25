@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div>
+
+</div>
+<script>
+    let order;
+    do {
+        alert("Hôm nay chúng tôi có !\n" +
+            "\n" +
+            "1. Cafe\n" +
+            "2. Cam vắt\n" +
+            "3. Nước ép cà rốt\n" +
+            "4. Nước ép cà chua\n" +
+            "5. Nước lọc\n" +
+            "6. Nước dừa\n" +
+            "7. Hủy order\n");
+        order = +prompt("Nhập số tương ứng với món trong menu");
+        switch (order) {
+            case 1:
+                if (confirm("Đơn giá của Cafe là 15.000đ/1 ly, Ban  co muon mua khong")) {
+                    let numberOrder = +prompt("Nhập số lượng bạn muốn mua");
+                    alert("Tổng tiền cần thanh toán là: " + numberOrder * 15000 + " VNĐ");
+                }
+                break;
+            case 2:
+                if (confirm("Đơn giá của Cam vắt là 25.000đ/1 ly, Ban  co muon mua khong")) {
+                    let numberOrder = +prompt("Nhập số lượng bạn muốn mua");
+                    alert("Tổng tiền cần thanh toán là: " + numberOrder * 25000 + " VNĐ");
+                }
+                break;
+            case 3:
+                if (confirm("Đơn giá của Nước ép cà rốt là 25.000đ/1 ly, Ban  co muon mua khong")) {
+                    let numberOrder = +prompt("Nhập số lượng bạn muốn mua");
+                    alert("Tổng tiền cần thanh toán là: " + numberOrder * 25000 + " VNĐ");
+                }
+                break;
+            case 4:
+                if (confirm("Đơn giá của Nước ép cà chua là 25.000đ/1 ly, Ban  co muon mua khong")) {
+                    let numberOrder = +prompt("Nhập số lượng bạn muốn mua");
+                    alert("Tổng tiền cần thanh toán là: " + numberOrder * 25000 + " VNĐ");
+                }
+                break;
+            case 5:
+                if (confirm("Đơn giá của Nước lọc là 5.000đ/1 ly, Ban  co muon mua khong")) {
+                    let numberOrder = +prompt("Nhập số lượng bạn muốn mua");
+                    alert("Tổng tiền cần thanh toán là: " + numberOrder * 5000 + " VNĐ");
+                }
+                break;
+            case 6:
+                if (confirm("Đơn giá của Nước dừa là 20.000đ/1 ly, Ban  co muon mua khong")) {
+                    let numberOrder = +prompt("Nhập số lượng bạn muốn mua");
+                    alert("Tổng tiền cần thanh toán là: " + numberOrder * 20000 + " VNĐ");
+                }
+                break;
+            case 7:
+                break;
+            default:
+                alert("Món bạn chọn không tồn tại !");
+        }
+    } while (order !== 7)
+</script>
+<body>
+</body>
+</html>
