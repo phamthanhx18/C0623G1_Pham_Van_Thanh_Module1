@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+      let income = +prompt("Nhập lương của bạn");
+      let thue;
+      let VND = new Intl.NumberFormat('vi-VN', {
+          style: 'currency',
+          currency: 'VND',
+      });
+      if (income>15000000){
+          thue = 20/100;
+          document.write("Tiền lương của bạn là: "+VND.format(income)+"<br>");
+          document.write("Mức thuế bạn phải đóng là: "+VND.format(income*thue)+"<br>");
+          document.write("Tiền lương sau thuế là: "+VND.format(income -(income*thue))+"<br>");
+      }
+      else if (income>7000000){
+          thue = 10/100;
+          document.write("Tiền lương của bạn là: "+VND.format(income)+"<br>");
+          document.write("Mức thuế bạn phải đóng là: "+VND.format(income*thue)+"<br>");
+          document.write("Tiền lương sau thuế là: "+VND.format(income -(income*thue))+"<br>");
+      }
+      else {
+          thue = 5/100;
+          document.write("Tiền lương của bạn là: "+VND.format(income)+"<br>");
+          document.write("Mức thuế bạn phải đóng là: "+VND.format(income*thue)+"<br>");
+          document.write("Tiền lương sau thuế là: "+VND.format(income -(income*thue))+"<br>");
+      }
+  </script>
+</body>
+</html>

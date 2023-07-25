@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let numerators = [24, 2, 30];
+  let denominators = [6, 3, 4];
+  let maxNumerators = numerators[0]/denominators[0];
+  let index;
+  for (let i = 1; i < numerators.length; i++) {
+      if (maxNumerators < numerators[i]/denominators[i]){
+        maxNumerators = numerators[i]/denominators[i];
+        index = i;
+      } else {
+        index = 0;
+      }
+  }
+  console.log(numerators[index]+" / "+denominators[index]+" Ở vị trí số "+index);
+</script>
+</body>
+</html>

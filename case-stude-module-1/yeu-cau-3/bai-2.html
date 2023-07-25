@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function missingValue(arrayA, arrayB) {
+        let soPhanTuA = +prompt("Số phần tử của mang A");
+        let soPhanTuB = +prompt("Số phần tử của mang B");
+        for (let i = 0; i < soPhanTuA; i++) {
+            arrayA[i] = +prompt("Nhap phan tu " + (i + 1) + " cua mang A")
+        }
+        for (let i = 0; i < soPhanTuB; i++) {
+            arrayB[i] = +prompt("Nhap phan tu " + (i + 1) + " cua mang B")
+        }
+        let arrayC = [];
+        for (let i = 0; i < arrayA.length; i++) {
+            if (arrayB.indexOf(arrayA[i]) === -1) {
+                arrayC.push(arrayA[i]);
+            }
+        }
+        for (let i = 0; i < arrayB.length; i++) {
+            if (arrayA.indexOf(arrayB[i]) === -1) {
+                arrayC.push(arrayB[i]);
+            }
+        }
+        document.write("Mảng A: " + arrayA+"<br>");
+        document.write("Mảng B: " + arrayB+"<br>");
+        document.write("Mảng C: " + arrayC+"<br>");
+        return arrayC;
+    }
+    let arrayA = [];
+    let arrayB = [];
+    missingValue(arrayA, arrayB);
+
+</script>
+</body>
+</html>
