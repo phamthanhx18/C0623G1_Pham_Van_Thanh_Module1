@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s = prompt("Nhap xau ki tu muon dem");
+    document.write("Xau ki tu nhap vao: "+s)
+    let arrayNew = [];
+    for (let i = 0; i < s.length; i++) {
+        if (arrayNew.indexOf(s[i])===-1){
+            arrayNew.push(s[i]);
+        }
+    }
+    document.write("<br>");
+    document.write("Co "+arrayNew.length+" ki tu khac nhau la: "+arrayNew);
+</script>
+</body>
+</html>

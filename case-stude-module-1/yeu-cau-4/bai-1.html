@@ -6,10 +6,44 @@
 </head>
 <body>
 <script>
-  let string = "tRuong    TaN   HAI";
-  for (let i = 0; i < string; i++) {
-    
+  let string = prompt("Nhap chuoi can chuyen");
+  document.write("Chuoi da nhap vao: "+string+"<br>");
+  string = string.split(" ");
+  let resultArray = []
+  for (let i = 0; i < string.length; i++) {
+    if (string[i]!==""){
+        resultArray.push(string[i]);
+    }
   }
+  let maxString = resultArray[0];
+  for (let i = 1; i < resultArray.length; i++) {
+      if (maxString.length<(resultArray[i].length)){
+          maxString = resultArray[i]
+      }
+  }
+  maxString = maxString.split("");
+  for (let i = 0; i < maxString.length; i++) {
+      if (i===0){
+          maxString[i] = maxString[i].toUpperCase();
+      } else {
+          maxString[i] = maxString[i].toLowerCase();
+      }
+  }
+  let result = [];
+  for (let i = 0; i < resultArray.length; i++) {
+      for (let j = 0; j < resultArray[i].length; j++) {
+          if (j===0){
+              result += (resultArray[i][j].toUpperCase())
+          } else {
+              result += (resultArray[i][j].toLowerCase())
+          }
+      }
+      result += " ";
+  }
+  document.write("Chuoi da chuyen: "+result);
+  document.write("<br>");
+  document.write("tu dai nhat: "+maxString.join(""));
+
 </script>
 </body>
 </html>
