@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soHangM;
+    let soPhanTuN
+    do {
+        soHangM = +prompt("Nhập số nguyên là hàng M");
+        soPhanTuN = +prompt("Nhập số phần tử của mỗi hàng là số nguyên");
+        if (isNaN(soPhanTuN) === false && isNaN(soHangM) === false && soPhanTuN > 0 && soHangM > 0) {
+            console.log("Du lieu duoc nhap la so");
+            break;
+        } else {
+            alert("Du lieu ban nhap vao khong hop le")
+        }
+    } while (true)
+    let newArray = [];
+    for (let i = 0; i < soHangM; i++) {
+        newArray[i] = [];
+        for (let j = 0; j < soPhanTuN; j++) {
+            newArray[i][j] = +prompt("Nhap phan tu " + (j + 1) + " của hàng số" + (i + 1));
+        }
+    }
+    // Nhập dữ liệu cho Array;
+    console.log(newArray);
+    let min = newArray[0][0];
+    let max = newArray[0][0];
+    for (let i = 0; i < newArray.length; i++) {
+        for (let j = 0; j < newArray[i].length; j++) {
+            if (max<newArray[i][j]){
+                max = newArray[i][j];
+            } else if (min>newArray[i][j]){
+                min = newArray[i][j];
+            }
+        }
+    }
+    console.log("Mảng được thêm vào là: "+newArray);
+    console.log("Giá trị lớn nhất là: "+max);
+    console.log("Giá trị nhỏ nhất là: "+min);
+</script>
+</body>
+</html>

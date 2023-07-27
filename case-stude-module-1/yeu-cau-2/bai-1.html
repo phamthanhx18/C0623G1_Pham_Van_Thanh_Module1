@@ -7,9 +7,9 @@
 <body>
 <script>
     let number = +prompt("Nhập chiều cao cua tam giac");
-    for (let i = 1; i < number; i++) {
-        for (let j = 1; j <= i; j++) {
-            if (j === 1 || j === i) {
+    for (let i = 0; i < number; i++) {
+        for (let j = 0; j <= i; j++) {
+            if (j === 0 || j === i) {
                 document.write("*")
             } else if (i === number-1) {
                 document.write("*");

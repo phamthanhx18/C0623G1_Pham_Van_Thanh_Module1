@@ -6,17 +6,44 @@
 </head>
 <body>
 <script>
-  let s1 = "aabcc";
-  let s2 = "adcaa";
-  s1 = s1.split("");
-  s2 = s2.split("");
-  let count = 0;
-  for (let i = 0; i < s1.length; i++) {
-      for (let j = 0; j < s2.length; j++) {
-          // if (s1[i].)
-      }
-  }
-  // document.write("Co "+arrayNew.length+" ki tu khac nhau la: "+arrayNew);
+    let array1 = "aabcc";
+    let array2 = "adcaa";
+    array1 = array1.split("");
+    array2 = array2.split("");
+    let array3 = [];
+
+    function commonCharacterCount(array1, array2) {
+        for (let i = 0; i < array1.length; i++) {
+            for (let j = 0; j < array2.length; j++) {
+                if (array1[i] === array2[j]) {
+                    array3.push(array1[i]);
+                    array2.splice(j, 1);
+                    break;
+                }
+            }
+        }
+        document.write("Có " + array3.length + " kí tự chung là: " + array3)
+        document.write("<br>")
+        // array3 = [c,c,a]
+        // newArray = [c,a]
+        // Lọc trùng phần tử giống nhau sang mảng khác
+        let newArray = [];
+        for (let i = 0; i < array3.length; i++) {
+            if (newArray.indexOf(array3[i]) === -1) {
+                newArray.push(array3[i]);
+            }
+        }
+        for (let i = 0; i < newArray.length; i++) {
+            let count = 0;
+            for (let j = 0; j < array3.length; j++) {
+                if (newArray[i]===array3[j]){
+                    count++
+                }
+            }
+            document.write("Trong do phan tu "+newArray[i]+" xuat hien"+count+" <br>");
+        }
+    }
+    commonCharacterCount(array1, array2);
 </script>
 </body>
 </html>

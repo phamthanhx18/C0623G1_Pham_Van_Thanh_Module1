@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soHangM;
+    let soPhanTuN
+    do {
+        soHangM = +prompt("Nhập số nguyên là hàng M");
+        soPhanTuN = +prompt("Nhập số phần tử của mỗi hàng là số nguyên");
+        if (isNaN(soPhanTuN) === false && isNaN(soHangM) === false && soPhanTuN > 0 && soHangM > 0) {
+            console.log("Du lieu duoc nhap la so");
+            break;
+        } else {
+            alert("Du lieu ban nhap vao khong hop le")
+        }
+    } while (true)
+    let newArray = []
+    let sum = 0;
+    let soChan = "";
+    for (let i = 0; i < soHangM; i++) {
+        newArray[i] = [];
+        for (let j = 0; j < soPhanTuN; j++) {
+            newArray[i][j] = +prompt("Nhap phan tu " + (j+1) + " của hàng số" + (i+1));
+            if (newArray[i][j]%2===0){
+                sum += newArray[i][j];
+                soChan += newArray[i][j]+",";
+            }
+        }
+    }
+    document.write("Mảng M*N được thêm vào là: "+newArray+"<br>");
+    document.write("Các số chẵn được thêm vào là: "+soChan);
+    document.write("Tổng các số chẵn được thêm vào là "+sum);
+    console.log(soChan);
+    console.log(sum);
+    console.log(newArray);
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soHangM;
+    let soPhanTuN
+    do {
+        soHangM = +prompt("Nhập số nguyên là hàng M");
+        soPhanTuN = +prompt("Nhập số phần tử của mỗi hàng là số nguyên");
+        if (isNaN(soPhanTuN) === false && isNaN(soHangM) === false && soPhanTuN > 0 && soHangM > 0) {
+            console.log("Du lieu duoc nhap la so");
+            break;
+        } else {
+            alert("Du lieu ban nhap vao khong hop le")
+        }
+    } while (true)
+    let newArray = [];
+    let soNguyenTo = [];
+    for (let i = 0; i < soHangM; i++) {
+        newArray[i] = [];
+        for (let j = 0; j < soPhanTuN; j++) {
+            newArray[i][j] = +prompt("Nhap phan tu " + (j + 1) + " của hàng số" + (i + 1));
+            let count = 0;
+            if (newArray[i][j] === 2) {
+                soNguyenTo.push(newArray[i][j]);
+            } else {
+                for (let k = 2; k < newArray[i][j]; k++) {
+                    if ((newArray[i][j]) % k === 0) {
+                        count++;
+                    }
+                }
+                if (count === 0) {
+                    soNguyenTo.push(newArray[i][j]);
+                }
+            }
+        }
+    }
+    document.write("Mảng M*N được thêm vào là: " + newArray + "<br>");
+    document.write("Các số nguyên tố được thêm vào là: " + soNguyenTo + "<br>");
+    document.write("Tổng số số nguyên tố được thêm vào là: " + soNguyenTo.length);
+</script>
+</body>
+</html>
