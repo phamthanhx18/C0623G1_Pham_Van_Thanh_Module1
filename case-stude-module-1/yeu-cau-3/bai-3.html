@@ -6,19 +6,17 @@
 </head>
 <body>
 <script>
-  let numerators = [30, 2, 5];
-  let denominators = [4, 3, 4];
-  let maxNumerators = numerators[0]/denominators[0];
-  let index;
-  for (let i = 1; i < numerators.length; i++) {
-      if (maxNumerators < numerators[i]/denominators[i]){
-        maxNumerators = numerators[i]/denominators[i];
-        index = i;
-      } else {
-        index = 0;
-      }
-  }
-  console.log(numerators[index]+" / "+denominators[index]+" Ở vị trí số "+index);
+    let numerators = [4, 6, 4];
+    let denominators = [2, 2, 4];
+    let maxNumerators = numerators[0] / denominators[0];
+    let index = 0;
+    for (let i = 1; i < numerators.length; i++) {
+        if (maxNumerators < numerators[i] / denominators[i]) {
+            maxNumerators = numerators[i] / denominators[i];
+            index = i;
+        }
+    }
+    console.log(numerators[index] + " / " + denominators[index] + " Ở vị trí số " + index);
 </script>
 </body>
 </html>

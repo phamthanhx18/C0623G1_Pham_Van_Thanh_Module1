@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="submit" value="Thêm mới học viên" id="add" onclick="addHocVien()">
+    <input type="submit" value="Sửa thông tin học viên" id="edit" onclick="editHocVien()">
+    <input type="submit" value="Xóa học viên" id="del" onclick="deleteHocVien()">
+    <br>
+    <br>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+        <tr>
+            <th>Mã Học Viên</th>
+            <th>Tên</th>
+            <th>Lớp</th>
+            <th>Email</th>
+            <th>Ngày Sinh</th>
+        </tr>
+        </thead>
+        <tbody id="result"></tbody>
+    </table>
+
+    <script src="main.js"></script>
+</body>
+</html>
